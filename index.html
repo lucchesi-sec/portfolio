@@ -13,15 +13,18 @@
             --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            --dark-bg: #0f1419;
-            --light-bg: #fafbfc;
-            --card-bg: #ffffff;
-            --text-primary: #24292f;
-            --text-secondary: #656d76;
-            --border-color: #d0d7de;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
-            --shadow-md: 0 4px 20px rgba(0,0,0,0.1);
-            --shadow-lg: 0 8px 32px rgba(0,0,0,0.15);
+            --dark-bg: #0d1117;
+            --darker-bg: #010409;
+            --card-bg: #161b22;
+            --card-hover-bg: #1c2128;
+            --text-primary: #f0f6fc;
+            --text-secondary: #8b949e;
+            --text-muted: #656d76;
+            --border-color: #30363d;
+            --border-hover: #484f58;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.4);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
         }
 
         * {
@@ -34,7 +37,7 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
             line-height: 1.7;
             color: var(--text-primary);
-            background: var(--light-bg);
+            background: var(--dark-bg);
             overflow-x: hidden;
         }
 
@@ -165,7 +168,8 @@
         .project-card:hover {
             transform: translateY(-8px);
             box-shadow: var(--shadow-lg);
-            border-color: transparent;
+            border-color: var(--border-hover);
+            background: var(--card-hover-bg);
         }
 
         .project-title {
@@ -197,6 +201,8 @@
         .skill-category:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-md);
+            background: var(--card-hover-bg);
+            border-color: var(--border-hover);
         }
 
         .skill-category h3 {
@@ -225,17 +231,25 @@
             content: '▸';
             position: absolute;
             left: 0;
-            color: #667eea;
+            color: #58a6ff;
             font-weight: bold;
         }
 
         .experience-item {
             margin: 30px 0;
             padding: 25px;
-            background: linear-gradient(145deg, #f8fafc, #ffffff);
+            background: var(--card-bg);
             border-radius: 12px;
-            border-left: 4px solid #667eea;
+            border-left: 4px solid #58a6ff;
             box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover {
+            background: var(--card-hover-bg);
+            border-color: var(--border-hover);
+            transform: translateX(5px);
         }
 
         .experience-item h3 {
@@ -245,7 +259,7 @@
         }
 
         .experience-item .date {
-            color: var(--text-secondary);
+            color: var(--text-muted);
             font-style: italic;
             margin-bottom: 15px;
             font-weight: 500;
@@ -266,19 +280,20 @@
             content: '✓';
             position: absolute;
             left: 0;
-            color: #48bb78;
+            color: #56d364;
             font-weight: bold;
         }
 
         .contact-info {
             text-align: center;
-            background: var(--dark-bg);
+            background: var(--darker-bg);
             color: white;
             padding: 50px 40px;
             border-radius: 20px;
             margin-top: 60px;
             position: relative;
             overflow: hidden;
+            border: 1px solid var(--border-color);
         }
 
         .contact-info::before {
@@ -551,14 +566,19 @@
     <script>
         mermaid.initialize({ 
             startOnLoad: true,
-            theme: 'base',
+            theme: 'dark',
             themeVariables: {
-                primaryColor: '#f6f8fa',
-                primaryTextColor: '#24292f',
-                primaryBorderColor: '#d0d7de',
-                lineColor: '#656d76',
-                secondaryColor: '#ffffff',
-                tertiaryColor: '#f6f8fa'
+                darkMode: true,
+                background: '#0d1117',
+                primaryColor: '#161b22',
+                primaryTextColor: '#f0f6fc',
+                primaryBorderColor: '#30363d',
+                lineColor: '#8b949e',
+                secondaryColor: '#1c2128',
+                tertiaryColor: '#21262d',
+                mainBkg: '#161b22',
+                secondaryBkg: '#1c2128',
+                tertiaryBkg: '#21262d'
             }
         });
     </script>
