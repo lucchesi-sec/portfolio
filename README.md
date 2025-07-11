@@ -140,3 +140,5 @@ graph LR
 ---
 
 *Interested in discussing IT infrastructure, automation, or security projects? Feel free to reach out!*
+
+🌐 **[View Live Portfolio](https://lucchesi-sec.github.io/portfolio)**
