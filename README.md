@@ -14,9 +14,9 @@ My background combines practical enterprise IT management with emerging technolo
 
 ```mermaid
 graph TD
-    A[Portfolio] --> B[Security Projects]
-    A --> C[Automation Tools]
-    A --> D[Infrastructure]
+    A[🎯 Portfolio] --> B[🔒 Security Projects]
+    A --> C[🤖 Automation Tools]
+    A --> D[🛠️ Infrastructure]
     
     B --> E[Network Scanner]
     B --> F[AWS Security Audit]
@@ -24,6 +24,18 @@ graph TD
     C --> H[SSH Key Manager]
     D --> I[Home Lab]
     D --> J[MCP Servers]
+
+    classDef portfolio fill:#667eea,stroke:#5a67d8,stroke-width:4px,color:#ffffff
+    classDef security fill:#f56565,stroke:#e53e3e,stroke-width:3px,color:#ffffff
+    classDef automation fill:#48bb78,stroke:#38a169,stroke-width:3px,color:#ffffff
+    classDef infra fill:#ed8936,stroke:#dd6b20,stroke-width:3px,color:#ffffff
+    classDef projects fill:#38b2ac,stroke:#319795,stroke-width:2px,color:#ffffff
+
+    class A portfolio
+    class B security
+    class C automation
+    class D infra
+    class E,F,G,H,I,J projects
 ```
 
 ## Featured Projects
@@ -56,9 +68,9 @@ Network automation framework with 23+ infrastructure roles, zero-trust security 
 
 ```mermaid
 graph LR
-    A[Core Skills] --> B[Systems Admin]
-    A --> C[Automation]
-    A --> D[Security]
+    A[💻 Core Skills] --> B[🖥️ Systems Admin]
+    A --> C[⚡ Automation]
+    A --> D[🔐 Security]
     
     B --> E[Windows/Linux]
     B --> F[Network Admin]
@@ -66,6 +78,14 @@ graph LR
     C --> H[Infrastructure as Code]
     D --> I[Security Auditing]
     D --> J[Compliance]
+
+    classDef core fill:#667eea,stroke:#5a67d8,stroke-width:4px,color:#ffffff
+    classDef category fill:#4299e1,stroke:#3182ce,stroke-width:3px,color:#ffffff
+    classDef skills fill:#38b2ac,stroke:#319795,stroke-width:2px,color:#ffffff
+
+    class A core
+    class B,C,D category
+    class E,F,G,H,I,J skills
 ```
 
 ### Operating Systems & Infrastructure
